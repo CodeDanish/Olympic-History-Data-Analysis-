@@ -2,11 +2,30 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import matplotlib.pyplot as plt
+import py7zr
+import tempfile
+import os
 import seaborn as sns
 import plotly.figure_factory as ff
 import preprocessor, helper
 
-athlete_df = pd.read_csv('athlete_events.csv')
+archive_path = 'athlete_events.7z'
+csv_filename = 'athlete_events.csv'
+
+with tempfile.TemporaryDirectory() as temp_dir:
+    with py7zr.SevenZipFile(archive_path, mode='r') as archive:
+        extracted_files = archive.extract(path=temp_dir)
+
+    print("Extracted files:", os.listdir(temp_dir))
+
+    csv_file_path = os.path.join(temp_dir, csv_filename)
+
+    if not os.path.exists(csv_file_path):
+        raise FileNotFoundError(f"File not found: {csv_file_path}")
+    
+    athlete_df = pd.read_csv(csv_file_path)
+    
+#athlete_df = pd.read_csv('athlete_events.csv')
 region_df = pd.read_csv('noc_regions.csv')
 
 data = preprocessor.preprocess(athlete_df, region_df)
