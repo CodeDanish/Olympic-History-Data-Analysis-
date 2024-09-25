@@ -1,5 +1,122 @@
 # 
+```css
 .rings {
+  list-style: none;
+  margin: -9.75em -20.5em;
+  position: absolute;
+  
+  li {
+    border-radius: 1em;
+    font-size: 1em;
+    height: 12em;
+    margin-left: 1em;
+    margin-top: 1em;
+    position: absolute;
+    width: 12em;
+    
+   &:before, &:after {
+      border-radius: 50%;
+      position: absolute;
+    }
+    
+   &:before {
+      content: "";
+    }
+  }
+  
+  li:after {
+    border: 1.15em solid #000;
+    bottom: 0;
+    content: "";
+    left: -0.1em;
+    right: -0.1em;
+    top: -0.1em;
+  }
+  
+  .blue {
+    left: 0;
+    top: 0;
+    z-index: 10;
+    
+   &:after {
+      border-color: #0080cb;
+    }
+    
+   +.chain {
+      z-index: 24;
+
+   &:before, &:after {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+  
+  .yellow {
+    left: 6.8em;
+    top: 5.7em;
+    z-index: 20;
+    
+ &:after {
+      border-color: #fdb408;
+    }
+   border-right-color: transparent;
+      }
+    }
+  }
+  
+  .black {
+    left: 13.6em;
+    top: 0;
+    z-index: 21;
+    
+   &:after {
+        border-color: #000;
+    }
+  }
+  
+  .green {
+    left: 20.4em;
+    top: 5.7em;
+    z-index: 20;
+    
+   &:after {
+      border-color: #00a84c;
+    }
+    
+   +.chain  {
+      z-index: 23;
+
+   &:before, &:after {    
+      top: 5.7em;
+    z-index: 20;
+    
+   &:after {
+      border-color: #00a84c;
+    }
+    
+   +.chain  {
+      z-index: 23;
+
+   &:before, &:after {
+            border-top-color:        transparent;
+      }
+    }
+  }
+  
+  .red {
+    left: 27.2em;
+    top: 0;
+    z-index: 10;
+    
+   &:after {
+      border-color: #f02c49;
+    }
+    
+   +.chain {
+      z-index: 23;
+
+   &:before, &:after {
+        border-lef.rings {
   list-style: none;
   margin: -9.75em -20.5em;
   position: absolute;
@@ -120,6 +237,11 @@
     }
   }  
 }
+t-color: transparent;
+      }
+    }
+  }  
+}
 
 
 
@@ -157,6 +279,8 @@ body {
 .container {
   margin: 0 auto;
 }
+```
+```html
 <div class="container">
   <ul class="rings">
     <li class="blue"></li>
@@ -170,6 +294,7 @@ body {
     <li class="red chain"></li>
   </ul>
 </div>
+```
 🏅📊 Olympic History Data Analysis 
 
 ![Olympic Analysis](https://img.shields.io/badge/Olympic-Data%20Analysis-blue?style=for-the-badge) ![Python](https://img.shields.io/badge/Python-3.8%2B-yellow?style=for-the-badge) ![Data Visualization](https://img.shields.io/badge/Visualization-Powered-red?style=for-the-badge) ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
