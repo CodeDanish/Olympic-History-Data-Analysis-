@@ -1,17 +1,4 @@
-#
-<div class="container">
-  <ul class="rings">
-    <li class="blue"></li>
-    <li class="blue chain"></li>
-    <li class="yellow"></li>
-    <li class="yellow chain"></li>
-    <li class="black"></li>
-    <li class="green"></li>
-    <li class="green chain"></li>
-    <li class="red"></li>
-    <li class="red chain"></li>
-  </ul>
-</div>🏅📊 Olympic History Data Analysis 
+#https://codepen.io/AllThingsSmitty/pen/DZdwmV🏅📊 Olympic History Data Analysis 
 
 ![Olympic Analysis](https://img.shields.io/badge/Olympic-Data%20Analysis-blue?style=for-the-badge) ![Python](https://img.shields.io/badge/Python-3.8%2B-yellow?style=for-the-badge) ![Data Visualization](https://img.shields.io/badge/Visualization-Powered-red?style=for-the-badge) ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
